@@ -14,25 +14,23 @@ type ProductCardProps = {
 export function ProductCard({ name, description, badge, imageTone, whatsappLink }: ProductCardProps) {
   return (
     <motion.article
-      className="glass-panel p-4 md:p-5"
-      whileHover={{ y: -4 }}
-      transition={{ type: 'spring', stiffness: 240, damping: 22 }}
+      className="rounded-2xl border border-white/70 bg-white/60 p-3 shadow-softGlow backdrop-blur-md sm:p-4"
+      whileHover={{ y: -3 }}
+      transition={{ type: 'spring', stiffness: 240, damping: 24 }}
     >
-      <div className={`relative mb-4 h-44 rounded-2xl ${imageTone} p-4 shadow-softGlow`}>
-        <div className="absolute inset-3 rounded-2xl border border-white/50" />
-        <div className="absolute bottom-3 right-3 rounded-full bg-white/75 px-3 py-1 text-xs font-semibold text-deepAccent">
+      <div className={`relative mb-3 h-40 rounded-xl ${imageTone} p-3 sm:h-44`}>
+        <div className="absolute inset-3 rounded-xl border border-white/60" />
+        <div className="absolute bottom-3 right-3 rounded-full bg-white/75 px-2.5 py-1 text-[10px] font-semibold text-deepAccent">
           Coleção Páscoa
         </div>
       </div>
 
-      <span className="inline-flex rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-mauveText">
-        {badge}
-      </span>
-      <h3 className="mt-3 text-xl font-semibold text-deepAccent">{name}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-mauveText">{description}</p>
+      <span className="inline-flex rounded-full bg-white/75 px-2.5 py-1 text-[11px] font-medium text-mauveText">{badge}</span>
+      <h3 className="mt-2 text-lg font-semibold text-deepAccent">{name}</h3>
+      <p className="mt-1.5 text-sm leading-relaxed text-mauveText">{description}</p>
 
       <a
-        className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accentPink to-premiumPink px-4 py-3 text-sm font-semibold text-white transition hover:opacity-95"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accentPink to-premiumPink px-4 py-2.5 text-sm font-semibold text-white transition hover:opacity-95"
         href={whatsappLink}
         target="_blank"
         rel="noreferrer"
