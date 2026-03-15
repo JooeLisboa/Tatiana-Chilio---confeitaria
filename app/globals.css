@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: #fff8fb;
+  color: #5e3b4d;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-3xl border border-white/60 bg-white/45 backdrop-blur-xl shadow-premium;
+  }
+
+  .subtle-shine {
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.65) 35%,
+      rgba(255, 255, 255, 0.2) 70%
+    );
+  }
+}
