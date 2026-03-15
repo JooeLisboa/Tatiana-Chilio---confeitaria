@@ -17,6 +17,10 @@ body {
     @apply rounded-3xl border border-white/60 bg-white/45 backdrop-blur-xl shadow-premium;
   }
 
+  .card-shell {
+    @apply mx-auto w-full max-w-[30rem];
+  }
+
   .subtle-shine {
     background: linear-gradient(
       120deg,
